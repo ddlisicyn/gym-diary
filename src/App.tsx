@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import { RouterProvider } from "react-router-dom"
-import { Provider } from 'react-redux'
-import router from './routes/root'
-import store from './services/store'
+import { RouterProvider } from "react-router-dom";
+import { Provider } from 'react-redux';
+import router from './routes/root';
+import store from './services/store';
 
 function App() {
   return (
@@ -12,4 +11,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

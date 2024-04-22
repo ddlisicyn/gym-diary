@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { useState } from 'react'
+import { useState } from 'react';
 
 export const SignUpPage  = () => {
     const [email, setEmail] = useState('');
