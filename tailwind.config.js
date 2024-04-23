@@ -10,7 +10,9 @@ export default {
     },
     extend: {
       colors: {
-        'primary': '#FB5E05'
+        'primary': '#FB5E05',
+        'active-button': '#000000',
+        'secondary-button': '#828282'
       }
     },
   },
