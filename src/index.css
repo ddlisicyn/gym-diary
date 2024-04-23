@@ -4,7 +4,18 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-      font-family: "Inter", system-ui, sans-serif;
-    }
+  html {
+    font-family: "Inter", system-ui, sans-serif;
   }
+}
+
+.plus {
+  --b: 2px;   /* the thickness*/
+  --c: #0000 90deg,#FB5E05 0; /* the coloration */
+  width: 16px; /* the size */
+  aspect-ratio: 1;
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),var(--c)) 
+    calc(100% + var(--b)/2) calc(100% + var(--b)/2)/
+    calc(50%  + var(--b))   calc(50%  + var(--b));
+}
