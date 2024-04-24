@@ -16,7 +16,7 @@ export const Navbar = () => {
     }, [location]);
 
     return (
-        <div className="flex flex-row items-center justify-center w-screen h-1/6 fixed bottom-0 pb-5 gap-5">
+        <div className="flex flex-row items-center justify-center w-screen h-1/7 fixed bottom-0 pb-5 gap-7">
             <HomeButton isActive={activeLocation === core} />
             <AddTrainingButton />
             <StatsButton isActive={activeLocation === stats} />
