@@ -3,7 +3,9 @@ const routes = {
     signup: '/signup',
     profile: '/profle',
     stats: '/stats',
-    training: '/training'
+    training: '/training',
+    exercises: '/excercises',
+    favourites: '/favourites'
 }
 
 export default routes;
