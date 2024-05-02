@@ -5,8 +5,10 @@ import { ProfilePage } from '../Pages/Profile/ProfilePage';
 import routes from './constants';
 import { StatsPage } from '../Pages/Stats/StatsPage';
 import { TrainingPage } from '../Pages/Training/TrainingPage';
+import { ExcercisesPage } from '../Pages/Excercises/ExercisesPage';
+import { ExercisePage } from '../Pages/Excercises/ExercisePage';
 
-const { core, signup, profile, stats, training } = routes;
+const { core, signup, profile, stats, training, exercises, favourites } = routes;
 
 const router = createBrowserRouter([
     {
@@ -28,6 +30,18 @@ const router = createBrowserRouter([
     {
         path: `${training}/:id`,
         element: <TrainingPage />
+    },
+    {
+        path: exercises,
+        element: <ExcercisesPage />
+    },
+    {
+        path: `${exercises}/:id`,
+        element: <ExercisePage />
+    },
+    {
+        path: favourites,
+        element: <ExcercisesPage />
     }
 ]);
 

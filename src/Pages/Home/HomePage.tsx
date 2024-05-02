@@ -7,19 +7,22 @@ import routes from "../../routes/constants";
 import { Section } from "./Components/Section";
 import { ISection } from "./constants";
 
-const { profile } = routes;
+const { profile, stats, exercises, favourites } = routes;
 
 const sections: ISection[] = [
     {
-        title: 'Предыдущие тренировки'
+        title: 'Предыдущие тренировки',
+        route: stats
     },
     {
         title: 'Список упражнений',
+        route: exercises,
         description: 'Нами была собрана база данных из 000 количества упражнений. Выбери те, которые тебе понравятся.',
         img: 'https://amp.sportscheck.com/i/sportscheck/D100001001113996?w=500&h=500&qlt=10&unsharp=(0,1,1,7)'
     },
     {
-        title: 'Избранные упражнения'
+        title: 'Избранные упражнения',
+        route: favourites
     }
 ];
 
