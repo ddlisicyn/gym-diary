@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import servicesConstants, { IMe, IUser } from './constants';
+import { IMe, IUser, servicesConstants } from './constants';
 
 const { reducerPath, baseUrl, register, me } = servicesConstants;
 
@@ -11,32 +11,29 @@ export const authApi = createApi({
       query: (body: IUser) => ({
         method: 'POST',
         url: register,
-        body: body
-      })
+        body: body,
+      }),
     }),
     me: builder.query<IMe, void>({
       query: () => ({
         url: me,
         prepareHeaders: (headers: Headers) => {
-            const accessToken = localStorage.getItem('Token');
-        
-            if (accessToken) {
-              headers.set('Authorization', `Bearer ${accessToken}`);
-            }
-        
-            headers.set('Accept', 'application/json')
-            headers.set('Cache-Control', 'no-cache')
-            headers.set('Pragma', 'no-cache')
-            headers.set('Expires', '0')
-        
-            return headers
-        }
-      })
+          const accessToken = localStorage.getItem('Token');
+
+          if (accessToken) {
+            headers.set('Authorization', `Bearer ${accessToken}`);
+          }
+
+          headers.set('Accept', 'application/json');
+          headers.set('Cache-Control', 'no-cache');
+          headers.set('Pragma', 'no-cache');
+          headers.set('Expires', '0');
+
+          return headers;
+        },
+      }),
     }),
-  })
+  }),
 });
 
-export const {
-  useRegisterMutation,
-  useMeQuery
-} = authApi;
+export const { useRegisterMutation, useMeQuery } = authApi;
