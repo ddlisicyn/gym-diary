@@ -1,5 +1,3 @@
 export const TrainingPage = () => {
-    return (
-        <h1>Training Page</h1>
-    )
-}
+  return <h1>Training Page</h1>;
+};
