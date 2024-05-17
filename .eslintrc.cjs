@@ -23,12 +23,14 @@ module.exports = {
     // todo lint: включить это правило, пока прост лень думать о key listeners
     'jsx-a11y/click-events-have-key-events': 'off',
     'import/no-default-export': 'error',
+    'react/prop-types': 'off',
   },
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
-      }
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+      typescript: {},
     }
   }
 }
